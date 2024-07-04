@@ -69,34 +69,7 @@ var x = document.getElementById("demo");
     
 	
 	
-	
-	
-	
-	
-	
-	
-	function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
 
-function showPosition(position) {
-              var circle_marker_fba1009da19ef76d43d0c03e5aae2b33 = L.circleMarker(
-                [position.coords.latitude, position.coords.longitude],
-                {"bubblingMouseEvents": true, "color": "#ff3333", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 7}
-            ).addTo(map_2190530f4ccd151a93b39a5c00dc2438)
-}
-getLocation()
-	
-	
-	
-	
-	
-	
-	
 	
             var circle_marker_89f8502b7d1b0e5aeda37fce57c388ca = L.circleMarker(
                 [41.204654, -73.554513],
@@ -25933,7 +25906,36 @@ getLocation()
                 {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
             ).addTo(map_b85acc8222ef7ac160f1611b620e4002);
         
-    
+
+
+		
+	
+	
+	
+	
+	
+	function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+              var circle_marker_fba1009da19ef76d43d0c03e5aae2b33 = L.circleMarker(
+                [position.coords.latitude, position.coords.longitude],
+                {"bubblingMouseEvents": true, "color": "#ff3333", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 7}
+            ).addTo(map_2190530f4ccd151a93b39a5c00dc2438)
+}
+getLocation()
+	
+	
+	
+	
+	
+	
+	
 
         
 </script>
