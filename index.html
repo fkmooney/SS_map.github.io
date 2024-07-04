@@ -60,6 +60,25 @@
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             ).addTo(map_b85acc8222ef7ac160f1611b620e4002);
         
+
+	function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+              var circle_marker_fba1009da19ef76d43d0c03e5aae2b33 = L.circleMarker(
+                [position.coords.latitude, position.coords.longitude],
+                {"bubblingMouseEvents": true, "color": "#ff3333", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 7}
+            ).addTo(map_2190530f4ccd151a93b39a5c00dc2438)
+}
+getLocation();
+
+
+
     
             var circle_marker_89f8502b7d1b0e5aeda37fce57c388ca = L.circleMarker(
                 [41.204654, -73.554513],
